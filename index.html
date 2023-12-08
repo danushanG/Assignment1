@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Text Editor - [CT/2019/032]</title>
+    <!-- Internal CSS -->
+    
+    <style>
+        button {
+            border: none;
+            background: none;
+            height: 60px;
+        }
+
+        button:hover {
+            background: #655c5c;
+        }
+
+        toolbar {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            align-items: center;
+        }
+
+        toolbar a {
+            color: rgb(243, 238, 238);
+            text-decoration: solid;
+            width: 1cm;
+        }
+
+        #editor {
+            margin: 20px auto;
+            border: 1px solid #000000;
+            width: 75%;
+            height: 500px;
+        }
+        #colorPicker {
+            display: none;
+        }
+    </style>
+        
+    
+</head>
+
+<body>
+
+    <center>
+        <div class="editor-panel">
+                <toolbar>
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </toolbar>
+        </div>
+    
+    <div id="editor" contenteditable="true"></div>
+    </center>
+
+    <script>
+        
+    function textFormatting(command) {
+        document.execCommand(command, false, null);
+    }
+
+    function fontColor() {
+        let color = document.getElementById('colorPicker').value;
+        document.execCommand('styleWithCSS', false, true);
+        document.execCommand('foreColor', false, color);
+    }
+
+    function toggleColorPicker() {
+        let colorPicker = document.getElementById('colorPicker');
+        colorPicker.style.display = colorPicker.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function textAlignment(align) {
+        document.execCommand('justify' + align, false, null);
+    }
+
+    function justify() {
+        document.execCommand('justifyFull', false, null);
+    }
+
+    function undo() {
+        document.execCommand('undo', false, null);
+    }
+
+    function redo() {
+        document.execCommand('redo', false, null);
+    }
+    
+
+    </script>
+</body>
+<!-- Author: [Danushan] | [CT/2019/032] -->
+</html>
